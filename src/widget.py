@@ -12,9 +12,7 @@ def mask_card_number(bank_name: str, card_number: str) -> str:
 def bank_account(bank_book: str, bank_account: str) -> str:
     bank_account = str(bank_account)
     """Функция Получает номер cчета и на выходе приобразует в зашифрованном виде """
-    masked_bank_account = (
-        "**" + bank_account[16:]
-    )
+    masked_bank_account = "**" + bank_account[16:]
     """через слайсы указываем какие цифры отправить на выход добавляем пустой пробел, затем еще слайсы и так далее"""
     return f"{bank_book} {masked_bank_account}"
 
