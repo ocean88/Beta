@@ -1,4 +1,3 @@
-from datetime import datetime
 def mask_card_number(bank_name: str, card_number: str) -> str:
     """Функция Получает номер карты и на выходе приобразует в зашифрованном виде"""
     card_number = str(card_number)
