@@ -10,7 +10,7 @@ def mask_card_number(card_number: str) -> str:
     elif len(card_number) == 12:
         return f"Номер карты: **** {last_four_digits}"
     else:
-        return f"Invalid card number length. It should be 12 or 16 digits long."
+        return f"неправильный номер счета или карты должно быть 12 или 20"
 
 
 def convert_date_format(date_string: str) -> str:
