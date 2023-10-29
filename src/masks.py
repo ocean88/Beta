@@ -9,7 +9,7 @@ def mask_card_number(bank_name: str,card_number: str) -> str:
     elif len(card_number) == 16:
         return f"{bank_name} {card_number[:4]} {card_number[4:6]}** **** {card_number[12:]}"
     else:
-        return f"неправильный номер счета или карты должно быть 12 или 20"
+        return f"неправильный номер счета или карты должно быть 16 или 20"
 
 
 def convert_date_format(date_string: str) -> str:
