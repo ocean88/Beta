@@ -19,3 +19,5 @@ def convert_date_format(date_string: str) -> str:
     """Возвращаем в нужном виде через слайсы"""
 
     return f"{date_string[8:10]}.{date_string[5:7]}.{date_string[0:4]}"
+
+
