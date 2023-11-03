@@ -5,7 +5,7 @@ from src.processing import sort_by_date
 """импорт функции из файла src/widget.py"""
 
 
-print(split_value("Visa Platinum 7158300734726758"))
+print(split_value("Visa Platinum 8990922113665229"))
 
 data = [
     {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
