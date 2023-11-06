@@ -29,6 +29,7 @@ def test_filter_by_currency():
     filtered_transactions = list(filter_by_currency(transactions, "GBP"))
     assert len(filtered_transactions) == 0
 
+
 def test_transaction_descriptions():
     """Тест функций генераторов"""
     transactions = [
@@ -46,12 +47,12 @@ def test_transaction_descriptions():
         }
     ]
 
-
     descriptions = list(transaction_descriptions(transactions))
     assert len(descriptions) == 3
     assert descriptions[0] == "Transaction 1"
     assert descriptions[1] == "Transaction 2"
     assert descriptions[2] == "Transaction 3"
+
 
 def test_card_number_generator():
     """Тест функций генераторов"""
