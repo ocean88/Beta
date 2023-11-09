@@ -7,6 +7,7 @@ from src.generators import (
     transaction_descriptions,
     card_number_generator,
 )
+from src.decorators import my_function
 
 """импорт функции из файла src/widget.py"""
 
@@ -110,4 +111,7 @@ for _ in range(5):
 
 for card_number in card_number_generator(1, 5):
     print(card_number)
+"""передача данных и принт функции"""
+
+print(my_function(1, 2))
 """передача данных и принт функции"""
