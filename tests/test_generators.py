@@ -1,20 +1,25 @@
-from src.generators import filter_by_currency, transaction_descriptions,card_number_generator
+from src.generators import (
+    filter_by_currency,
+    transaction_descriptions,
+    card_number_generator,
+)
+
 
 def test_filter_by_currency():
     """Тест функций генераторов"""
     transactions = [
         {
             "operationAmount": {"currency": {"code": "USD"}},
-            "description": "Transaction 1"
+            "description": "Transaction 1",
         },
         {
             "operationAmount": {"currency": {"code": "RUB"}},
-            "description": "Transaction 2"
+            "description": "Transaction 2",
         },
         {
             "operationAmount": {"currency": {"code": "USD"}},
-            "description": "Transaction 3"
-        }
+            "description": "Transaction 3",
+        },
     ]
 
     filtered_transactions = list(filter_by_currency(transactions, "USD"))
@@ -35,16 +40,16 @@ def test_transaction_descriptions():
     transactions = [
         {
             "operationAmount": {"currency": {"code": "USD"}},
-            "description": "Transaction 1"
+            "description": "Transaction 1",
         },
         {
             "operationAmount": {"currency": {"code": "RUB"}},
-            "description": "Transaction 2"
+            "description": "Transaction 2",
         },
         {
             "operationAmount": {"currency": {"code": "USD"}},
-            "description": "Transaction 3"
-        }
+            "description": "Transaction 3",
+        },
     ]
 
     descriptions = list(transaction_descriptions(transactions))
@@ -63,7 +68,6 @@ def test_card_number_generator():
     assert generated_card_numbers[1] == "0000 0000 0000 0002"
     assert generated_card_numbers[2] == "0000 0000 0000 0003"
     assert generated_card_numbers[3] == "0000 0000 0000 0004"
-
 
     generated_card_numbers = list(card_number_generator(9, 11))
     assert len(generated_card_numbers) == 3

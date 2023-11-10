@@ -11,12 +11,6 @@ def log(filename=None):
             try:
                 """Вызов функции и определение формата отображения времени"""
                 now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                if filename:
-                    with open(filename, "a") as file:
-                        file.write(f"{now} {func.__name__} ok\n")
-                else:
-                    print(f"{now} {func.__name__} ok")
-
                 result = func(*args, **kwargs)
 
                 if filename:
@@ -31,7 +25,9 @@ def log(filename=None):
                 now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 inputs = f"Inputs: {args}, {kwargs}"
                 error_message = f"{func.__name__}: {str(e)}"
-                log_message = f"{now} {func.__name__} error: {error_message}. {inputs}"
+                log_message = (
+                    f"{now} {func.__name__} error: {error_message}. {inputs} \n"
+                )
                 if filename:
                     with open(filename, "a") as file:
                         file.write(log_message + "\n")
@@ -44,7 +40,11 @@ def log(filename=None):
     return wrapper
 
 
-@log(filename="mylog.txt")
+@log(filename="")
 def my_function(x: int, y: int) -> int:
     """Передача аргумента где будут храниться результаты"""
     return x + y
+
+
+print(my_function(1, 2))
+"""передача данных и принт функции"""

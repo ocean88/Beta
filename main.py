@@ -113,5 +113,5 @@ for card_number in card_number_generator(1, 5):
     print(card_number)
 """передача данных и принт функции"""
 
-print(my_function(1, 2))
+print(my_function(5, 5))
 """передача данных и принт функции"""
