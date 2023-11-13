@@ -1,13 +1,14 @@
 import datetime
 from functools import wraps
+from typing import Optional, Callable, Any
 
 """Импорт библиотек"""
 
 
-def log(filename=None):
-    def wrapper(func):
+def log(filename: Optional[str] = None) -> Callable:
+    def wrapper(func: Callable) -> Callable:
         @wraps(func)
-        def inner(*args, **kwargs):
+        def inner(*args: Any, **kwargs: Any) -> Any:
             try:
                 """Вызов функции и определение формата отображения времени"""
                 now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -40,7 +41,7 @@ def log(filename=None):
     return wrapper
 
 
-@log(filename="")
+@log(filename="mylog.txt")
 def my_function(x: int, y: int) -> int:
     """Передача аргумента где будут храниться результаты"""
     return x + y
