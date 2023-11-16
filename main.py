@@ -8,9 +8,9 @@ from src.generators import (
     card_number_generator,
 )
 from src.decorators import my_function
+from src.utils import read_transaction_data, get_transaction_amount
 
 """импорт функции из файла src/widget.py"""
-
 
 data = [
     {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
@@ -98,7 +98,6 @@ print(sorted_data)
 print(convert_date_format("2018-07-11T02:26:18.671407"))
 """передача данных и принт функции"""
 
-
 usd_transactions = filter_by_currency(transactions, "USD")
 for _ in range(2):
     print(next(usd_transactions)["id"])
@@ -115,3 +114,7 @@ for card_number in card_number_generator(1, 5):
 
 print(my_function(5, 5))
 """передача данных и принт функции"""
+
+json_import = read_transaction_data("operations.json")
+print(get_transaction_amount(json_import[0]))
+"""Импортируем файл json затем передаем только 1 транзакцию и выводит значение суммы с типом float"""
