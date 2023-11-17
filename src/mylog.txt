@@ -1,0 +1,52 @@
+Calling function my_function with args=(1, 2) kwargs={}
+Result of function my_function: 3
+Calling function my_function with args=(1, 2) kwargs={}
+Result of function my_function: 3
+Calling function my_function with args=(1, 3) kwargs={}
+Result of function my_function: 4
+Calling function my_function with args=(1, 3) kwargs={}
+Result of function my_function: 4
+Calling function my_function with args=(1, 5) kwargs={}
+Result of function my_function: 6
+2023-11-10 00:59:31 my_function ok
+2023-11-10 00:59:31 my_function ok
+2023-11-10 01:11:39 my_function ok
+2023-11-10 01:11:39 my_function ok
+2023-11-10 01:11:49 my_function ok
+2023-11-10 01:11:49 my_function ok
+2023-11-10 01:12:09 my_function ok
+2023-11-10 01:12:09 my_function error: Error in function my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, 'asdf'), {}
+2023-11-10 01:13:56 my_function ok
+2023-11-10 01:13:56 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, 'asdf'), {}
+2023-11-10 01:46:02 my_function ok
+2023-11-10 01:46:02 my_function ok
+2023-11-10 01:49:55 my_function ok
+2023-11-10 01:49:55 my_function ok
+2023-11-10 01:51:02 my_function ok
+2023-11-10 01:51:02 my_function ok
+2023-11-10 23:21:54 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '2'), {}
+2023-11-10 23:25:35 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '2'), {} 
+ 2023-11-10 23:25:35 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '2'), {}
+2023-11-10 23:26:50 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '2'), {} 
+
+2023-11-10 23:26:50 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '2'), {} 
+
+2023-11-10 23:27:32 my_function ok
+2023-11-10 23:27:32 my_function ok
+2023-11-10 23:28:56 my_function ok
+2023-11-10 23:28:56 my_function ok2023-11-10 23:30:10 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '4'), {} 
+
+2023-11-10 23:30:10 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '4'), {} 
+2023-11-10 23:33:17 my_function ok
+2023-11-10 23:33:17 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '4'), {} 
+
+2023-11-10 23:33:45 my_function ok
+2023-11-10 23:33:45 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '4'), {} 
+
+2023-11-10 23:35:07 my_function ok
+2023-11-10 23:35:32 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '4'), {} 
+
+2023-11-10 23:35:38 my_function error: my_function: unsupported operand type(s) for +: 'int' and 'str'. Inputs: (1, '4'), {} 
+
+2023-11-10 23:35:52 my_function ok
+2023-11-13 17:22:22 my_function ok
