@@ -1,3 +1,4 @@
+from src.logger import setup_logging
 from src.widget import split_value
 from src.widget import convert_date_format
 from src.processing import filter_by_state
@@ -83,6 +84,8 @@ transactions = [
 ]
 
 """данные с которыми работаем"""
+
+logger = setup_logging()
 
 print(split_value("Visa Platinum 8990922113665229"))
 """вызов функции передача данных с 1 аргументом"""
