@@ -130,4 +130,4 @@ print(file_csv.iloc[0])
 
 file_excel = excel_reader("transactions_excel.xlsx")
 print(file_excel.iloc[0])
-"""передача данных и принт функции должно вывести 'from'"""
+"""передача данных и принт функции должно вывести по фильтру 'from'"""
