@@ -1,3 +1,5 @@
+from src.csvreader import csv_reader
+from src.excelreader import excel_reader
 from src.logger import setup_logging
 from src.widget import split_value
 from src.widget import convert_date_format
@@ -121,3 +123,11 @@ print(my_function(5, 5))
 json_import = read_transaction_data("operations.json")
 print(get_transaction_amount(json_import[0]))
 """Импортируем файл json затем передаем только 1 транзакцию и выводит значение суммы с типом float"""
+
+file_csv = csv_reader("transactions.csv")
+print(file_csv.iloc[0])
+"""передача данных и принт функции должно вывести 'RUB' по фильтру"""
+
+file_excel = excel_reader("transactions_excel.xlsx")
+print(file_excel.iloc[0])
+"""передача данных и принт функции должно вывести по фильтру 'from'"""
