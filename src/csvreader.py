@@ -4,6 +4,7 @@ import pandas as pd
 
 
 def csv_reader(filename: str) -> Any:
+    """Получаем аргумент виде csv файла и возвращаем содержимое"""
     try:
         current_directory = os.path.dirname(os.path.abspath(__file__))
         data_directory = os.path.join(current_directory, "..", "data")
