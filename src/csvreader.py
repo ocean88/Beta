@@ -10,7 +10,6 @@ def csv_reader(filename: str) -> Any:
         file_path = os.path.join(data_directory, filename)
         with open(file_path, "r", encoding="utf-8") as file:
             data = pd.read_csv(file, delimiter=";")
-            rub_operations = data[data["currency_code"] == "RUB"]["currency_code"]
-            return rub_operations
+            return data
     except FileNotFoundError:
         return []

@@ -10,7 +10,6 @@ def excel_reader(filename: str) -> Any:
         file_path = os.path.join(data_directory, filename)
         with open(file_path, "r", encoding="utf-8"):
             data = pd.read_excel(file_path)
-            rub_operations = data[data['currency_code'] == 'RUB']['from']
-            return rub_operations
+            return data
     except (FileNotFoundError):
         return []
