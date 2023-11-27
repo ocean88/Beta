@@ -12,6 +12,7 @@ from src.generators import (
 )
 from src.decorators import my_function
 from src.utils import read_transaction_data, get_transaction_amount
+from src.re_collections import extract_csv_data, count_operations
 
 """импорт функции из файла src/widget.py"""
 
@@ -124,10 +125,18 @@ json_import = read_transaction_data("operations.json")
 print(get_transaction_amount(json_import[0]))
 """Импортируем файл json затем передаем только 1 транзакцию и выводит значение суммы с типом float"""
 
-file_csv = csv_reader("transactions.csv")
-print(file_csv.iloc[0])
-"""передача данных и принт функции должно вывести 'RUB' по фильтру"""
+read_csv = csv_reader("transactions.csv")
+print(read_csv)
+"""передача данных и принт функции"""
 
 file_excel = excel_reader("transactions_excel.xlsx")
-print(file_excel.iloc[0])
-"""передача данных и принт функции должно вывести по фильтру 'from'"""
+print(file_excel)
+"""передача данных и принт функции"""
+
+file_csv = extract_csv_data("transactions.csv", 'Перевод')
+print(file_csv)
+"""передача данных и принт функции"""
+
+result = count_operations(file_csv)
+print(result)
+"""передача данных extract_csv_data и принт функции"""

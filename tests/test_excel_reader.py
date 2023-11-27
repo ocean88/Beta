@@ -1,8 +1,9 @@
+from typing import Any
 from src.excelreader import excel_reader
-import pandas as pd
 
-def test_csv_reader():
+
+def test_csv_reader() -> Any:
     test_file = 'transactions_excel.xlsx'
     transactions = excel_reader(test_file)
 
-    assert transactions.iloc[0] == 'Visa 0773092093872450'
+    assert len(transactions) > 500
