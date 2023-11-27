@@ -14,3 +14,7 @@ def csv_reader(filename: str) -> Any:
             return data
     except FileNotFoundError:
         return []
+
+
+file_csv = csv_reader("transactions.csv")
+print(file_csv)
